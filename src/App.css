@@ -1,0 +1,92 @@
+.content {
+  display: flex;
+  height: 934px;
+}
+.payment {
+  background: #f8f1eb;
+  flex: 1 1 845px;
+}
+.summary {
+  flex: 1 1 595px;
+}
+
+h3 {
+  font: 12px Arial, normal;
+  color: #bdbdbd;
+  margin-top: 0px;
+}
+.payment-header {
+  font: 12px Arial, normal;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  margin-top: 51.72px;
+  margin-left: 15%;
+  margin-bottom: 20px;
+}
+
+.payment-form {
+  background: #ffffff;
+  height: 796px;
+  margin-left: 15%;
+  margin-right: 5%;
+  padding-left: 25px;
+  padding-top: 10px;
+  border: 1px solid #e9d6c5;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+form {
+  display: flex;
+}
+.paymentMethodContainer {
+  border: 2px solid #f2f2f2;
+  border-radius: 6px;
+  background: #fafafa;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+.creditCard {
+  padding: 15px 0px 15px 15px;
+  margin-top: 0px;
+  border-bottom: 2px solid #f2f2f2;
+  font-weight: 400;
+  background: white;
+  font-size: 14px;
+}
+.cardNumber {
+  margin: 8px 15px 0px 15px;
+}
+.monthYear {
+  margin: 8px 15px 15px 15px;
+}
+.cvv {
+  margin: 8px 15px 15px 0px;
+}
+.completeButton {
+  padding-left: 7px;
+  margin-top: 25px;
+  margin-right: 10px;
+  height: 48px;
+  width: 97%;
+  background: #009900;
+  border-radius: 3px;
+  border: none;
+  color: white;
+}
+.iconsContainer {
+  display: flex;
+  justify-content: center;
+}
+img {
+  margin-right: 20px;
+}
+.summary {
+  width: 595px;
+}
+
+/* media queries */
+form {
+  @media (max-width: 767px) {
+    flex-flow: column;
+  }
+}
