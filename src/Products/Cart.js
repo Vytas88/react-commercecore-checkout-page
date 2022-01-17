@@ -1,13 +1,37 @@
-import React, {useContext} from 'react';
-import {CartContext} from './CartContext'
+import React, {createContext, useReducer} from 'react';
+import {products} from './Products';
+import ContextCart from "./ContextCart";
+import {reducer} from "./Reducer"
+
+
+export const CartContext = createContext();
+
+const initialState = {
+    item:products,
+    totalItem: 0,
+} 
 
 export const Cart = () => {
-    const [cart, setCart] = useContext(CartContext);
-    const totalPrice = cart.reduce((acc, curr) => acc + curr.price, 0);
+    const [state, dispatch] = useReducer(reducer, initialState);
     
+    //To delete items from cart
+    const removeItem = (id) => {
+        return dispatch({
+            type: "REMOVE_ITEM",
+            payload: id,
+        })
+    }
+
+    //Use the useEffect to update the total data
+    useEffect(() => {
+        dispatch({type: "GET_TOTAL"});
+    },[state.item]);
+ 
     return (
-        <div>
-        <p>Total USD $ {totalPrice.toFixed(2) } </p>
-        </div>
+        <CartContext.Provider value={{... state, removeItem}}>
+        <ContextCart />
+        </CartContext.Provider>
     )
 }
+
+export default Cart

@@ -6,15 +6,17 @@ import verisign from './Icons/group.svg'
 import {Input} from './Components/Input.style'
 import {Header} from './Components/Header.style'
 import './App.css';
-import {ProductList} from './Products/ProductList'
 import {Cart} from './Products/Cart'
-import {CartProvider} from './Products/CartContext'
+import Dropdown from './Components/Dropdown'
+import Footer from './Components/Footer'
 
 function App() {
   return (
     <div className="App">
       <div className="content">
         <div className="payment">
+          <Dropdown/>
+          
           <h1 className="payment-header">PAYMENT AND SHIPPING</h1>
           <div className="payment-form">
             <Header>Customer information</Header>
@@ -54,16 +56,12 @@ function App() {
               </div>
           </div>
         </div>
-        <CartProvider>
-        <div className="summary">
-          <ProductList />
-          <Cart/>
-        </div>
-        </CartProvider>
+          <div className="summary">
+            <Cart/>
+          </div>
+  
       </div>
-      <div className="footer">
-      Logoipsum
-      </div>
+      <Footer/>
     </div>
   );
 }

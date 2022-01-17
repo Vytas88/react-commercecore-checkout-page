@@ -1,6 +1,6 @@
 .content {
   display: flex;
-  height: 934px;
+  height: 90%;
 }
 .payment {
   background: #f8f1eb;
@@ -8,6 +8,20 @@
 }
 .summary {
   flex: 1 1 595px;
+}
+
+.dropdown {
+  width: 360px;
+}
+
+.dropdown .dropdown-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown .dropdown-content {
+  position: absolute;
 }
 
 h3 {
@@ -26,7 +40,7 @@ h3 {
 
 .payment-form {
   background: #ffffff;
-  height: 796px;
+  height: 88%;
   margin-left: 15%;
   margin-right: 5%;
   padding-left: 25px;
@@ -84,9 +98,47 @@ img {
   width: 595px;
 }
 
+.remove-button {
+  display: none;
+  border: none;
+  background-color: white;
+  color: red;
+  font-size: 10px;
+}
+.summary:hover .remove-button {
+  display: block;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: white;
+  background-color: #dc624e;
+  padding-bottom: 20px;
+}
+.footerLink {
+  margin: 15px 20px 5px 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 11px;
+  padding-top: 20px;
+}
+.footerLinks {
+  padding-top: 20px;
+}
+.footerLogo {
+  padding-top: 20px;
+}
+.footerRights {
+  padding-top: 20px;
+  font-size: 12px;
+}
+
 /* media queries */
-form {
-  @media (max-width: 767px) {
+
+@media (max-width: 767px) {
+  form {
     flex-flow: column;
   }
 }
