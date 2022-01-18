@@ -3,7 +3,7 @@ import Items from "./Items";
 import {CartContext} from "./Cart";
 
 const ContextCart = () => {
-    const {item} = useContext(CartContext);
+    const {item, totalAmount} = useContext(CartContext);
 
     return (
         <div>
@@ -16,7 +16,7 @@ const ContextCart = () => {
                     }
 
                     <div className="card-total">
-                        <h3>Total USD <span>$48.99</span></h3>
+                        <h3>Total USD <span>${totalAmount.toFixed(2)}</span></h3>
                     </div>
                 </div>
             </div>

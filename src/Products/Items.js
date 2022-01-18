@@ -15,7 +15,7 @@ const Items = ({id, img, title, price}) => {
                 <h2>{title}</h2> 
             </div>
             <div className="product-price">
-                <h3>{price}</h3> 
+                <h3>${price}</h3> 
             </div>
             <div className="remove-item">
                 <button className="remove-button" onClick={() => removeItem(id)}>x Remove</button> 

@@ -1,4 +1,4 @@
-import React, {createContext, useReducer} from 'react';
+import React, {createContext, useReducer, useEffect} from 'react';
 import {products} from './Products';
 import ContextCart from "./ContextCart";
 import {reducer} from "./Reducer"
@@ -8,7 +8,7 @@ export const CartContext = createContext();
 
 const initialState = {
     item:products,
-    totalItem: 0,
+    totalAmount:0,
 } 
 
 export const Cart = () => {

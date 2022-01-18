@@ -1,5 +1,6 @@
 import {useState} from "react";
 
+
 function Dropdown() {
     const [isActive, setIsActive] = useState(false);
     return(
@@ -8,7 +9,7 @@ function Dropdown() {
             </div>
             {isActive && (
             <div className="dropdown-content">
-                <div className="dropdown-item">products</div>
+                <div className="dropdown-item">Products</div>
             </div>
             )}
         </div>
